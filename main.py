@@ -1,12 +1,12 @@
 import asyncio
 from os import getenv
-from Consts import TOKEN
+#from Consts import TOKEN
 from aiogram import Bot, Dispatcher, types
 from send_message_to_chat import private_router
 
-token = getenv(TOKEN)
+token = getenv("TOKEN")
 dp = Dispatcher()
-bot = Bot(TOKEN)
+bot = Bot("TOKEN")
 
 async def main():
     dp.include_router(private_router)
